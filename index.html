@@ -1,0 +1,100 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Site Mockup Neon</title>
+  <style>
+    /* Full-page portfolio mockup. The background is the user's PDF capture of
+       the article page, rendered at 2x in tiles (site/hi) so the text stays
+       sharp on high-density screens. All positions below are in the capture's
+       own units: the page is 1512 wide.
+         a-*: article, y 0–10630 (lead art at x 756–1512, y 0–793)
+         figure: the dating-app casino illustration, inserted just before the
+                 paragraph that mentions "the dating-app casino" (y 10655)
+         b-*: article continued, y 10630–14400
+         c-*: page footer (second PDF page) */
+    html, body { margin: 0; background: #fff; }
+    .page {
+      width: 100%;
+      max-width: 1512px;
+      margin: 0 auto;
+    }
+    .page img { display: block; width: 100%; height: auto; }
+    .sheet { position: relative; }
+
+    .lead-art {
+      position: absolute;
+      left: 50%;
+      top: 0;
+      width: 50%;
+      aspect-ratio: 756 / 793;
+      border: 0;
+      display: block;
+    }
+    /* covers the original illustrator's credit (x 1309–1480, y 811–823);
+       the new credit goes in here once the user supplies it */
+    .credit {
+      position: absolute;
+      left: calc(1296 / 1512 * 100%);
+      top: calc(804 / 10630 * 100%);
+      width: calc(200 / 1512 * 100%);
+      height: calc(26 / 10630 * 100%);
+      margin: 0;
+      background: #fff;
+    }
+
+    .inline-figure {
+      margin: 0;
+      padding: calc(20 / 1512 * 100%) 0 calc(40 / 1512 * 100%);
+      background: #fff;
+    }
+    .inline-figure iframe {
+      display: block;
+      width: calc(900 / 1512 * 100%);
+      aspect-ratio: 16 / 9;
+      margin: 0 auto;
+      border: 0;
+      border-radius: 40px;          /* the dating illustration sits in a rounded window */
+      overflow: hidden;
+      box-shadow: 0 18px 44px rgba(60, 0, 30, 0.28);
+    }
+
+    .caption {
+      margin: 0;
+      padding: 18px 16px 28px;
+      font: 12px/1.4 system-ui, sans-serif;
+      color: #777;
+      text-align: center;
+      border-top: 1px solid #e2e2e2;
+    }
+  </style>
+</head>
+<body>
+  <div class="page">
+    <div class="sheet">
+      <img src="article/a-01.jpg" alt="Article page capture" width="3024" height="3600">
+      <img src="article/a-02.jpg" alt="" width="3024" height="3600">
+      <img src="article/a-03.jpg" alt="" width="3024" height="3600" loading="lazy">
+      <img src="article/a-04.jpg" alt="" width="3024" height="3600" loading="lazy">
+      <img src="article/a-05.jpg" alt="" width="3024" height="3600" loading="lazy">
+      <img src="article/a-06.jpg" alt="" width="3024" height="3260" loading="lazy">
+      <iframe class="lead-art" src="small-hopes-neon/index.html" title="Small Hopes, interactive illustration"></iframe>
+      <p class="credit"></p>
+    </div>
+
+    <figure class="inline-figure">
+      <iframe src="dating-casino-neon/index.html" title="The Dating-App Casino (neon), animated illustration" loading="lazy"></iframe>
+    </figure>
+
+    <div class="sheet">
+      <img src="article/b-01.jpg" alt="" width="3024" height="3600" loading="lazy">
+      <img src="article/b-02.jpg" alt="" width="3024" height="3600" loading="lazy">
+      <img src="article/b-03.jpg" alt="" width="3024" height="340" loading="lazy">
+      <img src="article/c-01.jpg" alt="" width="3024" height="3600" loading="lazy">
+      <img src="article/c-02.jpg" alt="" width="3024" height="3476" loading="lazy">
+    </div>
+  </div>
+  <p class="caption">Mockup: proposed illustrations in place on the article page. Student project, not published by The New York Times.</p>
+</body>
+</html>

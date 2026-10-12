@@ -1,0 +1,28 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Small Hopes Neon</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Anton&family=Archivo:wght@400;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+  <script src="../lib/p5.min.js"></script>
+  <script src="../lib/rough.js"></script>
+</head>
+<body>
+  <div id="panel">
+  <main id="stage" aria-label="Interactive illustration: a betting receipt for everyday hopes that keeps printing until it covers the screen. A fictional simulation."></main>
+  <button id="sound" class="sound" type="button" aria-pressed="false" aria-label="Sound off. Turn sound on">
+    <svg viewBox="0 0 32 32" aria-hidden="true">
+      <path class="spk" d="M5 12h5l7-6v20l-7-6H5z"/>
+      <g class="on"><path d="M21 11.5a6 6 0 0 1 0 9"/><path d="M24.5 8a11 11 0 0 1 0 16"/></g>
+      <g class="off"><path d="M21 12l7 8M28 12l-7 8"/></g>
+    </svg>
+  </button>
+  </div>
+  <p id="live" class="sr-only" aria-live="polite"></p>
+  <script src="sketch.js"></script>
+</body>
+</html>
